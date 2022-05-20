@@ -1,0 +1,83 @@
+.design-system {
+  margin-block: 4.125rem 9rem;
+}
+
+.design-system > header {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.opacity-25 {
+  opacity: 0.25;
+}
+.opacity-40 {
+  opacity: 0.4;
+}
+
+/* ------------------- */
+/* Color               */
+/* ------------------- */
+.color {
+  margin-top: 5rem;
+}
+
+.color-layout {
+  --grid-gap: 1.875rem;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 2.625rem;
+}
+
+.color-layout .color-box {
+  height: 7.75rem;
+  border-radius: 10px;
+}
+
+/* ------------------- */
+/* Typography          */
+/* ------------------- */
+.typography {
+  margin-top: 5rem;
+}
+
+.typography-layout {
+  --flex-gap: 1.875rem;
+  margin-top: 2.5rem;
+}
+
+.typography-layout .column-left {
+  --space: 2rem;
+  flex-basis: 50%;
+}
+
+.typography-layout .column-right {
+  --space: 2rem;
+  flex-basis: 50%;
+}
+
+/* ------------------- */
+/* Buttons             */
+/* ------------------- */
+.buttons {
+  margin-top: 5rem;
+}
+
+.buttons-layout {
+  --grid-gap: 1.875rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 2.5rem;
+}
+
+.buttons-layout > div {
+  background-color: hsl(var(--clr-slate-200) / 0.05);
+  padding: 4rem 5.75rem;
+  border-radius: 10px;
+}
+
+.buttons-layout button {
+  margin-inline: auto;
+}
+
+.buttons-layout p {
+  text-align: center;
+  margin-top: 1rem;
+}

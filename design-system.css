@@ -29,7 +29,6 @@
 
 .color-layout .color-box {
   height: 7.75rem;
-  border-radius: 10px;
 }
 
 /* ------------------- */
@@ -70,7 +69,6 @@
 .buttons-layout > div {
   background-color: hsl(var(--clr-slate-200) / 0.05);
   padding: 4rem 5.75rem;
-  border-radius: 10px;
 }
 
 .buttons-layout button {

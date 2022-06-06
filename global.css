@@ -314,7 +314,8 @@ select {
   z-index: 1;
 }
 
-.header img {
+.header img,
+.footer img {
   max-width: 5.625rem;
 }
 
@@ -355,7 +356,7 @@ select {
   position: relative;
 }
 
-.courses article img {
+.courses article > img {
   position: absolute;
   top: 0;
   left: 1.75rem;
@@ -384,10 +385,6 @@ select {
   padding-block: 2.25rem;
 }
 
-.footer img {
-  max-width: 5.625rem;
-}
-
 @media (min-width: 45em) {
   .header {
     margin-top: 1.5rem;
@@ -395,7 +392,7 @@ select {
 
   .intro {
     --grid-gap: 0rem;
-    grid-template-columns: auto minmax(20rem, auto);
+    grid-template-columns: 1fr 1fr;
     padding-block: 6.25rem;
     margin-top: 0;
     position: relative;
@@ -413,10 +410,11 @@ select {
 
   .courses {
     margin-top: 4rem;
+    padding-bottom: 5.375rem;
   }
 
   .courses > .grid {
-    --grid-gap: 2rem;
+    --grid-gap: 2rem 0.75rem;
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -430,22 +428,32 @@ select {
 }
 
 @media (min-width: 75em) {
+  .header img,
+  .footer img {
+    max-width: 7.125rem;
+  }
+
   .intro {
-    grid-template-columns: auto minmax(44rem, auto);
-    padding-block: 10.75rem;
+    padding-block: 11rem;
+  }
+
+  .intro p {
+    max-width: 34ch;
+    margin-block: 1.875rem 2.5rem;
   }
 
   .intro > picture {
-    top: -15rem;
+    top: -14rem;
     right: -31rem;
   }
 
   .courses {
-    margin-top: 2.875rem;
+    margin-top: 3.375rem;
+    padding-bottom: 8.75rem;
   }
 
   .courses > .grid {
-    --grid-gap: 3.5rem;
+    --grid-gap: 3.5rem 1.875rem;
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -455,6 +463,10 @@ select {
 
   .courses article > div {
     padding: 4rem 2rem 2.5rem;
+  }
+
+  .courses article > div p {
+    margin-block: 1.5rem;
   }
 }
 

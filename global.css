@@ -10,6 +10,7 @@
   --clr-pink-600: 322 87% 55%;
   --clr-orange-400: 13 100% 64%;
   --clr-blue-400: 237 100% 64%;
+  --clr-blue-600: 233 92% 29%;
   --clr-neutral-100: 0 0% 100%;
   --clr-neutral-200: 234 100% 97%;
 
@@ -52,7 +53,7 @@
   --fw-800: 800;
 }
 
-@media (min-width: 60em) {
+@media (min-width: 75em) {
   :root {
     --fs-300: 1rem;
     --fs-400: 1.125rem;
@@ -172,18 +173,18 @@ select {
 }
 
 .container {
-  padding-inline: 1rem;
+  margin-inline: 1rem;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 45em) {
   .container {
-    padding-inline: 2.5rem;
+    margin-inline: 2.5rem;
   }
 }
 
-@media (min-width: 60em) {
+@media (min-width: 75em) {
   .container {
-    padding-inline: 10.3125rem;
+    margin-inline: 10.3125rem;
   }
 }
 
@@ -283,6 +284,12 @@ select {
   border-radius: 10px;
 }
 
+@media (min-width: 75em) {
+  .lg-rounded-15 {
+    border-radius: 15px;
+  }
+}
+
 /* ------------------- */
 /* Block               */
 /* ------------------- */
@@ -291,12 +298,20 @@ select {
   grid-template-rows: auto min-content;
   min-height: 100vh;
   min-width: fit-content;
+  overflow-x: hidden;
+}
+
+.landing > main {
+  --grid-gap: 0;
+  grid-template-rows: min-content min-content auto;
 }
 
 .header {
-  padding-top: 1rem;
+  margin-top: 1rem;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .header img {
@@ -304,43 +319,66 @@ select {
 }
 
 .intro {
-  --flex-gap: 2.875rem;
+  --grid-gap: 2.875rem;
   margin-top: 2.375rem;
-  flex-direction: column;
+  justify-items: center;
+}
+
+.intro h1 {
+  max-width: 15ch;
 }
 
 .intro p {
+  max-width: 35ch;
   margin-block: 1.625rem 1.5rem;
 }
 
 .courses {
-  --grid-gap: 1rem;
-  padding-bottom: 5rem;
   background: linear-gradient(
     180deg,
     hsl(var(--clr-neutral-100)) 0%,
     hsl(var(--clr-neutral-200)) 100%
   );
+  padding-bottom: 5rem;
+}
+
+.courses > .grid {
+  --grid-gap: 1rem;
 }
 
 .courses h2 {
   padding: 1.5rem 1.75rem 2rem;
+  margin-top: 1.5rem;
 }
 
-.courses article > img {
-  margin-bottom: -2rem;
-  padding-inline: 1.75rem;
+.courses article {
+  position: relative;
+}
+
+.courses article img {
+  position: absolute;
+  top: 0;
+  left: 1.75rem;
 }
 
 .courses article > div {
+  --flex-gap: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0px 25px 50px hsl(var(--clr-blue-600) / 0.044);
   padding: 3.5rem 1.75rem 2rem;
+  margin-top: 1.5rem;
 }
 
 .courses article > div p {
   margin-block: 1rem 1.5rem;
 }
 
-.footer {
+.courses article > div a {
+  margin-top: auto;
+}
+
+.footer > .flex {
   justify-content: space-between;
   align-items: center;
   padding-block: 2.25rem;
@@ -348,6 +386,76 @@ select {
 
 .footer img {
   max-width: 5.625rem;
+}
+
+@media (min-width: 45em) {
+  .header {
+    margin-top: 1.5rem;
+  }
+
+  .intro {
+    --grid-gap: 0rem;
+    grid-template-columns: auto minmax(20rem, auto);
+    padding-block: 6.25rem;
+    margin-top: 0;
+    position: relative;
+  }
+
+  .intro > div {
+    justify-self: flex-start;
+  }
+
+  .intro > picture {
+    position: absolute;
+    top: -10rem;
+    right: -21rem;
+  }
+
+  .courses {
+    margin-top: 4rem;
+  }
+
+  .courses > .grid {
+    --grid-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .courses h2 {
+    padding: 3.5rem 2rem;
+  }
+
+  .courses article > div {
+    padding: 3.5rem 2rem 2rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .intro {
+    grid-template-columns: auto minmax(44rem, auto);
+    padding-block: 10.75rem;
+  }
+
+  .intro > picture {
+    top: -15rem;
+    right: -31rem;
+  }
+
+  .courses {
+    margin-top: 2.875rem;
+  }
+
+  .courses > .grid {
+    --grid-gap: 3.5rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .courses h2 {
+    padding: 4rem 2rem;
+  }
+
+  .courses article > div {
+    padding: 4rem 2rem 2.5rem;
+  }
 }
 
 /* ------------------- */

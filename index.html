@@ -27,7 +27,7 @@
 </head>
 
 <body class="landing grid">
-  <main>
+  <main class="grid">
     <div class="header container flex">
       <div>
         <img src="/assets/logo-dark.svg" alt="Skilled logo">
@@ -37,8 +37,8 @@
       </button>
     </div>
 
-    <div class="intro flex">
-      <div class="container">
+    <div class="intro container grid">
+      <div>
         <h1 class="text-slate-600 fs-900 fw-800">Maximize skill, minimize budget</h1>
         <p class="fs-400 fw-500">
           Our modern courses across a range of in-demand skills will give you the
@@ -50,88 +50,92 @@
       </div>
       <picture>
         <source srcset="/assets/image-hero-desktop.webp, /assets/image-hero-desktop@2x.webp 2x" type="image/webp"
-          media="(min-width: 60em)">
+          media="(min-width: 75em)">
         <source srcset="/assets/image-hero-desktop.png, /assets/image-hero-desktop@2x.png 2x" type="image/png"
-          media="(min-width: 60em)">
+          media="(min-width: 75em)">
         <source srcset="/assets/image-hero-tablet.webp, /assets/image-hero-tablet@2x.webp 2x" type="image/webp"
-          media="(min-width: 40em)">
+          media="(min-width: 45em)">
         <source srcset="/assets/image-hero-tablet.png, /assets/image-hero-tablet@2x.png 2x" type="image/png"
-          media="(min-width: 40em)">
+          media="(min-width: 45em)">
         <source srcset="/assets/image-hero-mobile.webp, /assets/image-hero-mobile@2x.webp 2x" type="image/webp">
         <source srcset="/assets/image-hero-mobile.png, /assets/image-hero-mobile@2x.png 2x" type="image/png">
         <img src="/assets/image-hero-mobile.png" alt="29k members and 1,451 course hours">
       </picture>
     </div>
 
-    <div class="courses container grid">
-      <h2 class="bg-orange-to-pink text-neutral-100 fs-700 fw-800 rounded-10">
-        Check out our most popular courses!
-      </h2>
-      <article aria-labelledby="animation">
-        <img src="/assets/icon-animation.svg" alt="" aria-hidden="true">
-        <div class="bg-neutral-100 rounded-10">
-          <h3 class="text-slate-600 fs-600 fw-800" id="animation">Animation</h3>
-          <p class="fs-400 fw-500">
-            Learn to animate your characters, create your own animations, and
-            create your own characters.
-          </p>
-          <a class="link" href="#">Get Started</a>
-        </div>
-      </article>
-      <article aria-labelledby="design">
-        <img src="/assets/icon-design.svg" alt="" aria-hidden="true">
-        <div class="bg-neutral-100 rounded-10">
-          <h3 class="text-slate-600 fs-600 fw-800" id="design">Design</h3>
-          <p class="fs-400 fw-500">
-            Create beautiful, usable interfaces to help shape the future of
-            how the web looks.
-          </p>
-          <a class="link" href="#">Get Started</a>
-        </div>
-      </article>
-      <article aria-labelledby="photography">
-        <img src="/assets/icon-photography.svg" alt="" aria-hidden="true">
-        <div class="bg-neutral-100 rounded-10">
-          <h3 class="text-slate-600 fs-600 fw-800" id="photography">Photography</h3>
-          <p class="fs-400 fw-500">
-            Explore critical fundamentals like lighting, composition, and focus
-            to capture exceptional photos.
-          </p>
-          <a class="link" href="#">Get Started</a>
-        </div>
-      </article>
-      <article aria-labelledby="crypto">
-        <img src="/assets/icon-crypto.svg" alt="" aria-hidden="true">
-        <div class="bg-neutral-100 rounded-10">
-          <h3 class="text-slate-600 fs-600 fw-800" id="crypto">Crypto</h3>
-          <p class="fs-400 fw-500">
-            All you need to know to get started investing in crypto. Go from beginner
-            to advanced with this 54 hour course.
-          </p>
-          <a class="link" href="#">Get Started</a>
-        </div>
-      </article>
-      <article aria-labelledby="business">
-        <img src="/assets/icon-business.svg" alt="" aria-hidden="true">
-        <div class="bg-neutral-100 rounded-10">
-          <h3 class="text-slate-600 fs-600 fw-800" id="business">Business</h3>
-          <p class="fs-400 fw-500">
-            A step-by-step playbook to help you start, scale, and sustain your business
-            without outside investment.
-          </p>
-          <a class="link" href="#">Get Started</a>
-        </div>
-      </article>
+    <div class="courses">
+      <div class="container grid">
+        <h2 class="bg-orange-to-pink text-neutral-100 fs-700 fw-800 rounded-10 lg-rounded-15">
+          Check out our most popular courses!
+        </h2>
+        <article class="grid" aria-labelledby="animation">
+          <img src="/assets/icon-animation.svg" alt="" aria-hidden="true">
+          <div class="flex bg-neutral-100 rounded-10 lg-rounded-15">
+            <h3 class="text-slate-600 fs-600 fw-800" id="animation">Animation</h3>
+            <p class="fs-400 fw-500">
+              Learn to animate your characters, create your own animations, and
+              create your own characters.
+            </p>
+            <a class="link" href="#">Get Started</a>
+          </div>
+        </article>
+        <article class="grid" aria-labelledby="design">
+          <img src="/assets/icon-design.svg" alt="" aria-hidden="true">
+          <div class="flex bg-neutral-100 rounded-10 lg-rounded-15">
+            <h3 class="text-slate-600 fs-600 fw-800" id="design">Design</h3>
+            <p class="fs-400 fw-500">
+              Create beautiful, usable interfaces to help shape the future of
+              how the web looks.
+            </p>
+            <a class="link" href="#">Get Started</a>
+          </div>
+        </article>
+        <article class="grid" aria-labelledby="photography">
+          <img src="/assets/icon-photography.svg" alt="" aria-hidden="true">
+          <div class="flex bg-neutral-100 rounded-10 lg-rounded-15">
+            <h3 class="text-slate-600 fs-600 fw-800" id="photography">Photography</h3>
+            <p class="fs-400 fw-500">
+              Explore critical fundamentals like lighting, composition, and focus
+              to capture exceptional photos.
+            </p>
+            <a class="link" href="#">Get Started</a>
+          </div>
+        </article>
+        <article class="grid" aria-labelledby="crypto">
+          <img src="/assets/icon-crypto.svg" alt="" aria-hidden="true">
+          <div class="flex bg-neutral-100 rounded-10 lg-rounded-15">
+            <h3 class="text-slate-600 fs-600 fw-800" id="crypto">Crypto</h3>
+            <p class="fs-400 fw-500">
+              All you need to know to get started investing in crypto. Go from beginner
+              to advanced with this 54 hour course.
+            </p>
+            <a class="link" href="#">Get Started</a>
+          </div>
+        </article>
+        <article class="grid" aria-labelledby="business">
+          <img src="/assets/icon-business.svg" alt="" aria-hidden="true">
+          <div class="flex bg-neutral-100 rounded-10 lg-rounded-15">
+            <h3 class="text-slate-600 fs-600 fw-800" id="business">Business</h3>
+            <p class="fs-400 fw-500">
+              A step-by-step playbook to help you start, scale, and sustain your business
+              without outside investment.
+            </p>
+            <a class="link" href="#">Get Started</a>
+          </div>
+        </article>
+      </div>
     </div>
   </main>
 
-  <footer class="footer bg-slate-600 container flex">
-    <div>
-      <img src="/assets/logo-light.svg" alt="Skilled logo">
+  <footer class="footer bg-slate-600">
+    <div class="container flex">
+      <div>
+        <img src="/assets/logo-light.svg" alt="Skilled logo">
+      </div>
+      <button class="button" data-type="tertiary" data-size="normal">
+        Get Started
+      </button>
     </div>
-    <button class="button" data-type="tertiary" data-size="normal">
-      Get Started
-    </button>
   </footer>
 </body>
 

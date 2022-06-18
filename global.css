@@ -538,3 +538,23 @@ select {
 .link:focus {
   text-decoration: underline;
 }
+
+@media (min-width: 75em) {
+  .button[data-size="normal"] {
+    padding: 0.778em 1.778em;
+    border-radius: 1.556em;
+  }
+
+  .button[data-size="large"] {
+    padding: 1em 1.778em;
+    border-radius: 1.778em;
+  }
+
+  .button[data-type="tertiary"] {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--clr-blue-400)) -54.32%,
+      hsl(var(--clr-pink-600)) 100%
+    );
+  }
+}

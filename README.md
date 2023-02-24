@@ -27,15 +27,15 @@ Users should be able to:
 
 Desktop view
 
-<img src="./docs/landing-desktop.png?raw=true" width="100%" alt="desktop view"/>
+<img src="./docs/landing-desktop.jpg?raw=true" width="100%" alt="desktop view"/>
 
 Tablet view
 
-<img src="./docs/landing-tablet.png?raw=true" width="768px" alt="tablet view"/>
+<img src="./docs/landing-tablet.jpg?raw=true" width="768px" alt="tablet view"/>
 
 Mobile view
 
-<img src="./docs/landing-mobile.png?raw=true" width="375px" alt="mobile view"/>
+<img src="./docs/landing-mobile.jpg?raw=true" width="375px" alt="mobile view"/>
 
 ### Links
 
